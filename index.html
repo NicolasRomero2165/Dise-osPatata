@@ -1,13 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Indica al explorador que el documento es HTML5-->
+<html lang="en"> <!-- Es la etiqueta principal que engloba al resto de las etiquetas  -->
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- Indiva al navegador que tipo de caracteres contiene la página -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title> <!-- Muestra el título de la página. -->
 </head>
 <body>
-    <h1>Hola IFTS24</h1>
+    <ul>
+        <a href="#parrafos"><li>Párrafos</li></a>
+        <a href="#vinculos"><li>Vínculos</li></a>
+        <a href="#imagenes"><li>Imágenes</li></a>
+        <a href="#listas"><li>Listas</li></a>
+        <a href="#tablas"><li>Tablas</li></a>
+        <a href="#iframes"><li>Iframes</li></a>
+        <a href="#formularios"><li>Formularios</li></a>
+    </ul>
+    <h1 id="h1">Hola IFTS24</h1>
     <h2>Subtítulo</h2>
-    <p>Párrafo.</p>
+    <br>
+    <hr>
+    <p id="parrafos">Párrafo.</p>
+    <br>
+
+    <h2 id="vinculos">Vínculos</h2>
+    <a href="www.google.com">Ir a Google (no funciona)</a><br>
+    <a href="https://www.google.com/" target="_blank">Ir a Google (no funciona)</a><br><br>
+
+    <a href="mailto:direccion1@mail.com; direccion2@mail.com">Enviar un email a 2 destinatarios.</a><br>
+    <a href="mailto:direccion1@mail.com?cc=direccion2@mail.com&bcc=direccion3@mail.com&subject=Asunto&body=cuerpo">Enviar un email completo.</a><br>
+    <hr>
+    <h2 id="imagenes">Imágenes</h2>
+
+    
+    <figure>
+        <img src="./img/html_logo.jpg" alt="Logo HTML5" title="Imagen insertada desde la web." width="150px">
+        <figcaption>Logo HTML insertado localmente.</figcaption>
+    </figure>
+
+    <a href="https://code.visualstudio.com/" target="_blank"><img src="./img/vsc_logo.jpg" alt="Logo VSC" width="150px"></a><br><br>
+    <hr>
+    <h2 id="listas">Listas</h2>
+    <h3>Listas desordenadas</h3>
+    <ul>
+        <li>Lista</li>
+        <li>Tablas</li>
+        <li>Iframes</li>
+    </ul>
+    <h3>Listas ordenadas</h3>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <ol type="a" start="6">
+            <li>Item 2A</li>
+            <li>Item 2B</li>
+            <li>Item 2C</li>
+        </ol>
+    </ol>
+    <h3>Lista de definición</h3>
+    <dl>
+        <dt>Perro</dt>
+        <dd>Ladra</dd>
+        <dd>Tiene patas</dd>
+        <dd>Consume alimentos</dd>
+        <dt>Auto</dt>
+        <dd>Tiene bocina</dd>
+        <dd>Tiene ruedas</dd>
+        <dd>Consume combustible</dd>
+    </dl> <br><br><hr>
+
+    <h2 id="tablas">Tablas</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Encabezado 1</th>
+                <th>Encabezado 2</th>
+                <th>Encabezado 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>F2C1</td>
+                <td>F2C2</td>
+                <!--<td>F2C3</td>-->
+                <td rowspan="2">F2y3C3</td>
+            </tr>
+            <tr>
+                <td colspan="2">F3C1</td>
+                <!--<td>F3C3</td>-->
+            </tr>
+            <tr>
+                <td>F4C1</td>
+                <td>F4C2</td>
+                <td>F4C3</td>
+            </tr>
+            <tr>
+                <td>F5C1</td>
+                <td>F5C2</td>
+                <td>F5C3</td>
+            </tr>
+        </tbody>
+    </table> <br><hr>
+
+    <h3 id="iframes">Iframes</h3>
+
+    <ul>
+        <li><a target="ventana" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3904.7245890906265!2d-58.39469673467846!3d-34.61758884069368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccade51ac2f05%3A0x412d9275d44ddba8!2sIFTS%20N%C2%B024!5e0!3m2!1ses-419!2sar!4v1774483786868!5m2!1ses-419!2sar">Map IFTS24</a></li>
+        <li><a target="ventana" href="https://www.ifts24.edu.ar/">Web IFTS24</a></li>
+        <li><a target="ventana" href="https://guarani-autogestionagencia.bue.edu.ar/">SIU Guaraní</a></li>
+        <li><a target="ventana" href="https://www.youtube.com/embed/rRPO7uxdsBI">Video YouTube</a></li>
+    </ul>
+
+    <iframe name="ventana" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3904.7245890906265!2d-58.39469673467846!3d-34.61758884069368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccade51ac2f05%3A0x412d9275d44ddba8!2sIFTS%20N%C2%B024!5e0!3m2!1ses-419!2sar!4v1774483786868!5m2!1ses-419!2sar" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <hr>
+
+    <h2 id="formularios">Formularios</h2>
+    <form>
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" placeholder="Introduzca su nombre"><br><br>
+
+            <label for="mail">Email:</label>
+            <input type="email" id="mail"><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password"><br><br>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad"><br><br>
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend>Fechas y horas</legend>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha"><br><br>
+
+            <label for="fechaHora">Fecha con hora:</label>
+            <input type="datetime-local" id="fechaHora"><br><br>
+
+            <label for="mes">Mes:</label>
+            <input type="month" id="mes"><br><br>
+
+            <label for="semana">Semana:</label>
+            <input type="week" id="semana"><br><br>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora"><br><br>
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend>Selector de color</legend>
+            <label for="color">Color:</label>
+            <input type="color" id="color">
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend>CheckBox</legend>
+            <input type="checkbox" id="check1">
+            <label for="check1">Seleccionar opción 1</label><br><br>
+            <input type="checkbox" id="check2">
+            <label for="check2">Seleccionar opción 2</label><br><br>
+            <input type="checkbox" id="check3">
+            <label for="check3">Seleccionar opción 3</label><br><br>
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend>Radio Buttons</legend>
+            <input type="radio" name="radios" id="radio1">
+            <label for="radio1">Seleccionar opción 1</label><br><br>
+            <input type="radio" name="radios" id="radio2">
+            <label for="radio2">Seleccionar opción 2</label><br><br>
+            <input type="radio" name="radios" id="radio3">
+            <label for="radio3">Seleccionar opción 3</label><br><br>
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend>Select</legend>
+            <label for="selector">Seleccionar opción:</label>
+            <select name="" id="selector">
+                <option value="0" disabled selected>Elija una opción</option>
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+                <option value="3">Opción 3</option>
+            </select>
+        </fieldset><br><br>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+    </form>
+    <a href="#h1">Volver Arriba</a>
 </body>
 </html>
